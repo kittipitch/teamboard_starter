@@ -5,7 +5,7 @@ A web API where teams post feedback cards (What went well? What to improve? Acti
 vote on them, and filter by category. Think retrospective/retro board.
 
 ## Tech Stack
-- Runtime: Node.js 18+
+- Runtime: Bun
 - Framework: Express.js
 - Database: In-memory array (no DB setup required)
 - No frontend framework — API-only (test with curl)
@@ -20,8 +20,8 @@ vote on them, and filter by category. Think retrospective/retro board.
 - Port: 3000
 
 ## Commands
-- Start server: `node server.js`
-- Install deps: `npm install`
+- Start server: `bun server.js`
+- Install deps: `bun install`
 - Test: `curl http://localhost:3000/health`
 
 ## Security Rules (to be added in S4)
