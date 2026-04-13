@@ -1,0 +1,12 @@
+{
+  "name": "teamboard",
+  "version": "0.1.0",
+  "description": "Team Feedback Board — AI Workshop teaching project",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}
