@@ -61,10 +61,25 @@ source ~/.bashrc
 bun --version  # ควรได้ 1.x.x ขึ้นไป
 ```
 
-### 3.2 ติดตั้ง Claude Code CLI
-ติดตั้งอาวุธหลักของเรา:
+### 3.2 ติดตั้ง Claude Code CLI (WSL Only — Paste Bug Fix)
+เนื่องจากเวอร์ชันล่าสุดมี bug ที่ทำให้วางรหัสยืนยันไม่ได้ใน WSL ให้ติดตั้งเวอร์ชันที่เสถียรด้วย Bun ดังนี้:
+
 ```bash
-curl -fsSL https://cdn.anthropic.com/claude-code/install.sh | sh
+# ลบเวอร์ชันเก่าออกก่อน (ถ้ามี)
+npm uninstall -g @anthropic-ai/claude-code
+
+# ติดตั้งเวอร์ชัน 2.1.104
+bun install -g @anthropic-ai/claude-code@2.1.104
+```
+
+**เริ่มต้นใช้งาน:**
+```bash
+claude
+```
+
+**อัปเกรดเป็นเวอร์ชันล่าสุด (Optional - หลังจาก Login สำเร็จ):**
+```bash
+claude update
 ```
 
 **ตรวจสอบความพร้อม:**
@@ -116,6 +131,14 @@ bunx skillsadd caveman                   # ลด Token usage 65%
 1. ติดตั้ง [VS Code](https://code.visualstudio.com/) ใน Windows
 2. ติดตั้ง Extension ชื่อ **"WSL"**
 3. ใน Ubuntu Terminal พิมพ์ `code .` เพื่อเปิดโปรเจกต์
+
+### 5.1 การติดตั้ง VS Code Extension (Claude)
+เพิ่มพลัง AI เข้าไปใน Editor ของคุณ:
+1. เปิด VS Code ใน Windows
+2. กด `Ctrl + Shift + X` (Extension Marketplace)
+3. ค้นหาคำว่า **"Claude"**
+4. เลือกติดตั้ง Extension ของ **Anthropic** (หรือตัวที่ Instructor แนะนำ)
+5. ทำการ Sign-in หรือระบุ API Key ตามคำแนะนำบนหน้าจอ
 
 ---
 
